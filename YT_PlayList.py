@@ -32,7 +32,7 @@ def download_videos():
     # Get list of video links
     try:
         playlist_item_by_id = api.get_playlist_items(
-            playlist_id=playlist_id, count=0, return_json=True) #count=0 full playlist, json needed later in link
+            playlist_id=playlist_id, count=None, return_json=True) #count=None full playlist, json needed later in link
     except error.PyYouTubeException as e:
         messagebox.showinfo("error", e)
         return
